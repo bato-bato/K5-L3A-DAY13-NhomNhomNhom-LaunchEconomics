@@ -3,7 +3,7 @@
 - MSSV 2A202603497
 - Lớp K5-L3A
 - Nhánh làm việc `Thanh-Binh`
-- Vai trò và email do Thanh Bình bổ sung sau khi nhóm phân vai.
+- Vai trò đề xuất: chạy code, hoàn thiện CP2 trong lúc hai bạn gắn nhãn và điều phối phần duyệt chéo. Xác nhận vai trò và bổ sung email sau khi nhóm thống nhất.
 
 ## Phần việc và bằng chứng
 

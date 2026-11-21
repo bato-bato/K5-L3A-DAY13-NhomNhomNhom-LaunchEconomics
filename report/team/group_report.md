@@ -2,7 +2,7 @@
 
 ## 1. Thông tin nhóm
 
-NhomNhomNhom · K5-L3A. Thành viên và phân vai cập nhật trong [TEAM.md](../../TEAM.md).
+NhomNhomNhom · K5-L3A · 3 thành viên. Phân công và đóng góp cập nhật trong [TEAM.md](../../TEAM.md).
 
 ## 2. Mục tiêu và cách tiếp cận
 
