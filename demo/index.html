@@ -25,17 +25,28 @@
           <h1 id="title">Pilot trợ lý <em>hoàn phí</em></h1>
           <p class="intro">Đề xuất <strong>Go có điều kiện</strong> cho yêu cầu nội địa và hàng nặng.</p>
         </div>
-        <dl class="hero-stats">
-          <div><dt>Chi phí mỗi việc thành công</dt><dd>4.472 ₫</dd><small>978 việc thành công · mô phỏng</small></div>
-          <div><dt>Đóng trong 24h, không mở lại 7 ngày</dt><dd>82,83%</dd><small>994 trên 1.200 yêu cầu chạy thử</small></div>
-        </dl>
+        <div class="hero-stats">
+          <button type="button" class="metric-card" data-metric="cost-detail" aria-haspopup="dialog">
+            <span class="metric-label">Chi phí mỗi việc thành công</span>
+            <strong class="metric-value">4.472 ₫</strong>
+            <small>978 việc thành công · mô phỏng</small>
+            <span class="metric-link">Xem cách tính <span aria-hidden="true">↗</span></span>
+          </button>
+          <button type="button" class="metric-card" data-metric="closure-detail" aria-haspopup="dialog">
+            <span class="metric-label">Đóng trong 24h, không mở lại 7 ngày</span>
+            <strong class="metric-value">82,83%</strong>
+            <small>994 trên 1.200 yêu cầu chạy thử</small>
+            <span class="metric-link">Xem cách tính <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
       </div>
       <div class="analysis-grid">
         <article class="card">
           <h2>Chi phí theo loại yêu cầu</h2>
-          <p class="muted card-description">Đồng trên mỗi việc thành công · mô phỏng</p>
+          <p class="muted card-description">Đồng trên mỗi việc thành công · <strong id="chart-scenario" aria-live="polite">Mức gốc</strong></p>
           <div id="cost-chart" class="cost-chart"></div>
           <p class="benchmark"><span></span> Mốc nhân viên tự làm · 12.000 ₫</p>
+          <p class="chart-hint">Bấm vào một loại yêu cầu để xem cách tính.</p>
         </article>
         <article class="card">
           <h2>Kịch bản vận hành</h2>
@@ -46,6 +57,7 @@
             <strong id="scenario-cost"></strong><span id="scenario-delta"></span>
           </div>
           <p id="scenario-note" class="muted"></p>
+          <button type="button" id="scenario-explain" class="scenario-explain" aria-haspopup="dialog">Xem cách tính <span aria-hidden="true">↗</span></button>
         </article>
       </div>
       <article class="pilot-strip" aria-label="Thiết kế pilot">
@@ -92,6 +104,41 @@
       </form>
     </section>
   </main>
+  <dialog id="cost-detail" class="metric-dialog" aria-labelledby="cost-detail-title">
+    <form method="dialog" class="dialog-close">
+      <button type="submit" aria-label="Đóng cửa sổ" autofocus>×</button>
+    </form>
+    <h2 id="cost-detail-title">Chi phí mỗi việc thành công</h2>
+    <p class="metric-formula">4.373.585,132 ₫ ÷ 978 ≈ <strong>4.471,97 ₫</strong></p>
+    <p>Làm tròn đến đồng thành <strong>4.472 ₫</strong> mỗi yêu cầu thành công trong đợt chạy mô phỏng.</p>
+    <dl class="cost-breakdown">
+      <div><dt>Token đầu vào và đầu ra</dt><dd>245.585,132 ₫</dd></div>
+      <div><dt>Gọi tool</dt><dd>84.000 ₫</dd></div>
+      <div><dt>Xem lại · 890 phút × 2.000 ₫</dt><dd>1.780.000 ₫</dd></div>
+      <div><dt>Làm lại · 1.132 phút × 2.000 ₫</dt><dd>2.264.000 ₫</dd></div>
+    </dl>
+    <p>Tổng chi phí tính cả 1.624 lượt chạy, kể cả lượt lỗi. Mẫu số đếm 978 trong 1.200 yêu cầu có kết quả cuối <code>thanh_cong</code>.</p>
+  </dialog>
+  <dialog id="closure-detail" class="metric-dialog" aria-labelledby="closure-detail-title">
+    <form method="dialog" class="dialog-close">
+      <button type="submit" aria-label="Đóng cửa sổ" autofocus>×</button>
+    </form>
+    <h2 id="closure-detail-title">Đóng trong 24h, không mở lại 7 ngày</h2>
+    <p class="metric-formula">994 ÷ 1.200 × 100 ≈ <strong>82,83%</strong></p>
+    <p>Trong 1.200 yêu cầu chạy thử, có 994 yêu cầu thỏa đồng thời hai điều kiện:</p>
+    <ul>
+      <li>Được đóng trong 24 giờ (<code>dong_trong_24h = 1</code>).</li>
+      <li>Không bị mở lại trong 7 ngày (<code>mo_lai_trong_7_ngay = 0</code>).</li>
+    </ul>
+    <p>Khi đo trong pilot, chỉ dùng các yêu cầu đã đủ thời gian theo dõi 7 ngày.</p>
+  </dialog>
+  <dialog id="scenario-detail" class="metric-dialog" aria-labelledby="scenario-detail-title">
+    <form method="dialog" class="dialog-close">
+      <button type="submit" aria-label="Đóng cửa sổ" autofocus>×</button>
+    </form>
+    <h2 id="scenario-detail-title"></h2>
+    <div id="scenario-detail-content"></div>
+  </dialog>
   <footer class="shell">NhomNhomNhom · K5-L3A · Dữ liệu Lab 13</footer>
 </body>
 </html>

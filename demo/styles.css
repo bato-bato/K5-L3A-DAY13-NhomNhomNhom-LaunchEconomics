@@ -50,10 +50,44 @@ h2 { line-height: 1.24; letter-spacing: -.035em; margin-bottom: .4rem; }
 .intro { max-width: 42ch; margin-bottom: 0; color: #ddede5; }
 .intro strong { color: #fff; }
 .hero-stats { margin: 0; display: grid; gap: .75rem; }
-.hero-stats div { padding: .95rem 1.2rem; background: #ffffff12; border: 1px solid #ffffff35; border-radius: 13px; }
-.hero-stats dt { font-size: .88rem; font-weight: 650; }
-.hero-stats dd { color: #fff; margin: .15rem 0; font-size: clamp(2rem, 4vw, 2.85rem); line-height: 1.1; font-weight: 780; letter-spacing: -.055em; }
-.hero-stats small { color: #cde5d7; }
+.hero-stats .metric-card {
+  display: grid;
+  justify-items: start;
+  gap: .15rem;
+  width: 100%;
+  padding: .85rem 1.15rem;
+  background: #ffffff12;
+  border: 1px solid #ffffff35;
+  border-radius: 13px;
+  text-align: left;
+}
+.hero-stats .metric-card:hover { background: #ffffff26; border-color: #b5edc7; }
+.hero-stats .metric-card:focus-visible { outline-color: #b5edc7; }
+.metric-label { font-size: .88rem; font-weight: 650; }
+.metric-value { font-size: clamp(2rem, 4vw, 2.85rem); line-height: 1.1; font-weight: 780; letter-spacing: -.055em; }
+.hero-stats small { color: #cde5d7; font-weight: 400; }
+.metric-link { margin-top: .25rem; color: #b5edc7; font-size: .78rem; font-weight: 700; }
+
+.metric-dialog {
+  width: min(37rem, calc(100% - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  padding: clamp(1rem, 4vw, 1.75rem);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--ink);
+  box-shadow: 0 18px 60px #102d2738;
+}
+.metric-dialog::backdrop { background: #102d2799; }
+.metric-dialog h2 { margin: 0 2.75rem 1rem 0; }
+.metric-dialog p:last-child { margin-bottom: 0; }
+.metric-dialog code { overflow-wrap: anywhere; }
+.metric-formula { padding: .75rem 1rem; background: var(--mint); color: var(--green); border-radius: 8px; font-variant-numeric: tabular-nums; }
+.cost-breakdown { margin: 0 0 1rem; font-size: .9rem; }
+.cost-breakdown div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .15rem .75rem; padding-block: .5rem; border-bottom: 1px solid var(--line); }
+.cost-breakdown dd { margin: 0; font-weight: 700; white-space: nowrap; }
+.metric-dialog .dialog-close { position: absolute; top: .7rem; right: .7rem; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.dialog-close button { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0; background: var(--mint); color: var(--green); font-size: 1.4rem; }
+.dialog-close button:hover { background: #cdebd9; }
 
 .analysis-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 1rem; margin-top: 1rem; }
 .card, form { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: clamp(1.15rem, 3vw, 1.8rem); box-shadow: var(--shadow); }
@@ -63,7 +97,7 @@ h2 { line-height: 1.24; letter-spacing: -.035em; margin-bottom: .4rem; }
 .bar-label { display: flex; justify-content: space-between; gap: .5rem; font-size: .9rem; margin-bottom: .3rem; }
 .bar-label strong, .scenario-result, #total { font-variant-numeric: tabular-nums; }
 .track { display: block; position: relative; height: 10px; background: #edf2ee; border-radius: 10px; }
-.track::after { content: ""; position: absolute; left: 52.17%; inset-block: -2px; border-left: 2px dashed #314a41; }
+.track::after { content: ""; position: absolute; left: var(--benchmark); inset-block: -2px; border-left: 2px dashed #314a41; }
 .bar { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #369c74, #197851); }
 .bar.over { background: linear-gradient(90deg, #efa86d, #cb6e36); }
 .benchmark { display: flex; gap: .5rem; align-items: center; color: var(--muted); font-size: .82rem; margin: 1.05rem 0 0; }
@@ -120,3 +154,22 @@ footer { border-top: 1px solid var(--line); padding-block: 1rem 2rem; }
   .hero-stats, .fields, .rubric { grid-template-columns: 1fr; }
   .rubric li { display: grid; grid-template-columns: 3.5rem 1fr; gap: .25rem; }
 }
+
+.cost-chart .chart-row {
+  width: 100%;
+  padding: .4rem .55rem .55rem;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 8px;
+  font-weight: 400;
+  text-align: left;
+}
+.cost-chart .chart-row:hover { background: #edf4ef; }
+.chart-hint { color: var(--muted); font-size: .82rem; margin: .35rem 0 0; }
+.card .scenario-explain {
+  margin-top: 1rem;
+  background: var(--mint);
+  color: var(--green);
+  font-size: .85rem;
+}
+.card .scenario-explain:hover { background: #cdebd9; }
