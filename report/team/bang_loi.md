@@ -6,7 +6,7 @@
 
 **Người gắn nhãn 1 là Thiên Bảo. Người gắn nhãn 2 là Nguyễn Quỳnh Trang.** Thiên Bảo đã rà nhãn tham khảo theo hướng dẫn lab và ghi lý do trong [bản kiểm số](kiem_so_thanh_vien_2.md#c--bảng-đối-chiếu-20-ca). Trang đã đưa bộ nhãn đề xuất và lý do vào bảng.
 
-| Ca | Nhãn tham khảo của Thiên Bảo (1) | Nhãn đề xuất của Trang (2) | Trùng? | Nhãn thống nhất |
+| Ca | Nhãn gốc người  (1)-Bảo   | Nhãn gốc người (2)-Trang   | Trùng???? | Nhãn thống nhất |
 | ---: | --- | --- | --- | --- |
 | 1 | Do người dùng | Do người dùng | Có | Do người dùng |
 | 2 | Hệ thống | Hệ thống | Có | Hệ thống |
