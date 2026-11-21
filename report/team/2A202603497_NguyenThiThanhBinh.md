@@ -7,15 +7,16 @@
 
 ## Phần việc và bằng chứng
 
-Điền phần thực sự đã làm, ngày hoàn thành và commit hoặc tệp chứng minh. Bảng dưới dùng để ghi lại công việc sau khi thực hiện.
+Kết quả dưới đây được ghi từ lượt chạy của Thanh Bình trong môi trường `.venv` trên Mac.
 
 | Việc đã làm | Bằng chứng | Kết quả tự kiểm tra |
 | --- | --- | --- |
-| Chờ Thanh Bình bổ sung | | |
+| Chạy lại mô hình và các phép tính của lab | [lab13.py](../../src/lab13.py), lệnh `python lab13.py` | Ba phép thử đạt. A2 in 978 việc thành công và 4.471,97 đ/việc thành công (`simulated`). Script chạy đến hết D3 và E1. |
+| Kiểm tra tệp kế hoạch pilot | [pilot_plan.yaml](pilot_plan.yaml), đọc bằng `yaml.safe_load` | Tệp được đọc thành công và Terminal in `Pilot YAML OK`. |
 
 ## Công cụ AI đã dùng
 
-Codex hỗ trợ viết bản nháp, xây dựng mã tính và chạy đối chiếu kết quả từ CSV. Thanh Bình ghi lại cách kiểm độc lập, chẳng hạn tái tính A2 từ tổng phút hoặc chạy lại `lab13.py`, rồi giải thích kết quả bằng lời của mình.
+Codex hỗ trợ viết bản nháp, xây dựng mã tính và chạy đối chiếu kết quả từ CSV. Thanh Bình tự chạy lại `lab13.py` và kiểm tra tệp YAML trong Terminal. Kết quả tự kiểm được ghi ở bảng trên.
 
 ## Tự đánh giá
 
