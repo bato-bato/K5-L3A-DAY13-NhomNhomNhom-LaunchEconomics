@@ -61,3 +61,9 @@ git push origin Thanh-Binh
 ```
 
 Nhóm xác nhận nhánh nộp và commit chốt. Mỗi thành viên nộp chung link repo nhóm bằng tài khoản LMS cá nhân theo mốc Coach thông báo. [Hướng dẫn nộp](SUBMISSION.md)
+
+## Demo và nhập phiếu Gate 2a
+
+Mở [demo/index.html](demo/index.html) trong trình duyệt. Trang dùng số liệu lab, có biểu đồ chi phí theo loại và bộ chọn kịch bản để trình bày. Các giá trị là ảnh chụp kết quả từ `src/lab13.py` và bảng chi phí.
+
+Khi nhận được hồ sơ nhóm kia, vào **Phiếu chấm**, nhập tên nhóm, điểm 0/5/10 và bằng chứng cho từng tiêu chí, rồi ghi quyết định và câu hỏi. Bản nháp lưu trên trình duyệt đang dùng nếu trình duyệt cho phép. Có thể điền câu trả lời sau phiên duyệt. Bấm **Tải phiếu Markdown**, xem lại tệp đã tải rồi cập nhật `report/team/phieu_cham.md` từ tệp đó.
