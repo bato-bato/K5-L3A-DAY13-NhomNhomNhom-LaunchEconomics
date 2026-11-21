@@ -2,16 +2,18 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Tên nhóm: NhomNhomNhom
+- Lớp: K5-L3A
+- Repo nhóm: `K5-L3A-DAY13-NhomNhomNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL: [GitHub](https://github.com/bato-bato/K5-L3A-DAY13-NhomNhomNhom-LaunchEconomics)
+- Nhánh làm việc của Thanh Bình: `Thanh-Binh`
+- Nhánh nộp và commit chốt: chờ nhóm xác nhận
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
+|   1 | Nguyễn Thị Thanh Bình | 2A202603497 | | ThanhBinh101 | Chờ nhóm phân vai |
 |   2 |        |      |       |        |         |
 |   3 |        |      |       |        |         |
 |   4 |        |      |       |        |         |

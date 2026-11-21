@@ -1,51 +1,58 @@
-# Lab 13 · Nhiệm vụ D · Kế hoạch pilot trợ lý hoàn phí LogiX-VN (Gate 2a)
-# Điền mọi chỗ có dấu hỏi. Khi nộp, ngoài các dòng chú thích không còn dấu hỏi nào.
-# Kiểm tra đọc được: python -c "import yaml; yaml.safe_load(open('../report/team/pilot_plan.yaml'))"
-#
-# D1 · Cỡ mẫu (baseline 0,70; mục tiêu +5 điểm; alpha 0,05; power 0,8; ICC 0,02)
-#   a) Chia theo yêu cầu:
-#   b) Theo nhân viên, m = 75:
-#   c) 20 nhân viên mỗi nhóm:
-#   d) 6 depot mỗi nhóm:
-#   e) Mức chênh 6 điểm (859 mỗi nhóm), 20 nhân viên mỗi nhóm:
-#
-# D2 · Năm câu kiểm tra "tách được tác động" với cách chia đã chọn (mỗi câu một dòng):
-#   1. Đối chứng chạy cùng thời gian:
-#   2. Chia ngẫu nhiên hay do người chọn:
-#   3. Ảnh hưởng gián tiếp và cách giảm:
-#   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước:
-#   5. Ít nhất 20 cụm mỗi nhóm:
-#
-# Đánh đổi đã chấp nhận (nếu cách chia chưa đạt cả hai điều kiện):
-#
-# Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
+# Kế hoạch dự thảo. Ngày dự kiến và ngưỡng do nhóm xác nhận trước khi chạy.
+# D1 · Baseline 0,70; alpha 0,05; power 0,80; ICC 0,02.
+# a) Theo yêu cầu, tăng 5 điểm: 1.251 yêu cầu mỗi nhóm.
+# b) Theo nhân viên, m=75: DE=2,48; cần 3.103 yêu cầu và 42 nhân viên mỗi nhóm.
+# c) 20 nhân viên mỗi nhóm: trần cỡ mẫu hiệu dụng là 20/0,02 = 1.000 mỗi nhóm.
+# d) 6 depot mỗi nhóm: trần cỡ mẫu hiệu dụng là 6/0,02 = 300 mỗi nhóm.
+# e) Tăng 6 điểm: cần 859 hiệu dụng mỗi nhóm. Giải 20m/(0,98+0,02m) ≥ 859
+#    được m ≥ 299, DE=6,96 và 5.980 yêu cầu mỗi nhóm.
+# D2 · Khả năng tách tác động.
+# 1. Đối chứng chạy cùng kỳ, cùng depot, cùng tiêu chí tiếp nhận.
+# 2. Ngẫu nhiên theo staff_id, phân tầng depot, lưu seed và danh sách phân nhóm trước rollout.
+# 3. Kiểm soát quyền theo tài khoản; theo dõi truy cập chéo và ghi nhận điều chuyển ca.
+# 4. Chốt chỉ số, ngưỡng, luật dừng và lịch trước khi bật.
+# 5. Đúng 20 cụm nhân viên mỗi nhóm nếu huy động đủ 40 nhân viên.
+# Đánh đổi: tại 859 hiệu dụng mỗi nhóm, power cho mức tăng 5 điểm chỉ khoảng 0,64.
+# Mở lại trong 7 ngày: 51/1.200 = 4,25% toàn mẫu; 39/982 = 3,97% trong phạm vi.
 
 pilot:
-  owner: "?"                      # một người có tên vai trò, không ghi "cả đội"
-  scope: "?"                      # loại yêu cầu nào, depot nào; dựa vào kết quả A3
+  owner: Giám đốc vận hành LogiX-VN
+  scope: "Yêu cầu noi_dia và hang_nang tại các depot có nhân viên ở cả hai nhánh. Xác nhận danh sách depot và khả năng đủ 40 nhân viên trước khi chạy."
   assignment:
-    unit: "?"                     # request | staff | depot
+    unit: staff
     control_share: 0.5
     randomized: true
-  rollout: [0.10, 0.25, 0.50]     # mỗi bước một tuần
+    stratify_by: depot
+    random_seed: 1306
+    analysis: "Phân tích theo phân nhóm ban đầu ở giai đoạn 50%, kể cả yêu cầu không dùng trợ lý. Ước lượng chênh lệch theo điểm phần trăm với sai số chuẩn theo cụm nhân viên, có điều chỉnh depot."
+  rollout: [0.10, 0.25, 0.50]
+  rollout_schedule: "4 rồi 10 rồi 20 nhân viên được bật, tối thiểu một tuần mỗi bước. Phân tích chính bắt đầu khi đủ 20 nhân viên can thiệp và 20 đối chứng."
   primary_metric:
     name: dong_trong_24h_khong_mo_lai_7_ngay
     baseline: 0.70
-    mde: 0.05
+    mde: 0.06
     alpha: 0.05
     power: 0.80
-    n_per_arm: "?"
-    design_effect: "?"            # 1 nếu chia theo yêu cầu
-    clusters_per_arm: "?"         # để trống nếu chia theo yêu cầu
+    n_per_arm: 859
+    design_effect: 6.96
+    clusters_per_arm: 20
+    target_requests_per_staff: 299
+    target_requests_per_arm: 5980
+    followup: "Chốt kết quả sau khi mọi yêu cầu thuộc kỳ đo có ít nhất 8 ngày từ khi tạo, đủ để quan sát đóng trong 24 giờ và mở lại trong 7 ngày sau đóng."
   identifiability:
-    concurrent_control: "?"
-    spillover_risk: "?"
-    predeclared: "?"
+    concurrent_control: "Cùng kỳ, cùng depot, giữ quy trình tiếp nhận và chính sách hoàn phí như nhau."
+    spillover_risk: "Cấp quyền theo tài khoản, giữ nguyên luồng phân ca, theo dõi lượt mở trợ lý của staff_id ở nhánh đối chứng."
+    predeclared: "Chốt ngày, ngưỡng, cách phân tích, cách xử lý ca thiếu log và danh sách phân nhóm trước lần bật đầu."
   stop_rules:
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
-    - "NẾU ? TRONG ? THÌ ? KHÔNG THÌ ?"
-  interim_looks: "chỉ kiểm tra chỉ số an toàn"
-  rollback: "?"                   # ai bấm, mất bao lâu, khách được phục vụ bằng gì
-  decision_date: "?"
-  simulated_inputs: ["?"]         # liệt kê mọi con số giả lập đã dùng
+    - "NẾU có ít nhất 1 ca hoàn trùng được xác nhận TRONG thời gian pilot THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ chỉ tiếp tục khi các luật còn lại đạt."
+    - "NẾU tỷ lệ mở lại 7 ngày của nhánh can thiệp vượt 6% hoặc cao hơn đối chứng từ 2 điểm phần trăm TRONG 2 tuần có số liệu theo dõi đủ hạn liên tiếp THÌ Giám đốc vận hành tạm dừng và giao CSKH kiểm nguyên nhân KHÔNG THÌ chỉ tăng rollout khi chi phí và mức sử dụng đạt."
+    - "NẾU chi phí biến đổi mỗi việc thành công theo phút đo thực tế vượt 8.000 đ TRONG 2 tuần liên tiếp THÌ PM thu hẹp về noi_dia và kiểm tra giới hạn 2 lần chạy KHÔNG THÌ giữ phạm vi đã duyệt."
+    - "NẾU tỉ lệ sửa hoặc bỏ đề xuất vượt 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH giữ nguyên mức rollout và phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ chỉ tăng rollout khi an toàn và chi phí đạt."
+  interim_looks: "Kiểm an toàn, chi phí vận hành và mức sử dụng. Chỉ kiểm định chỉ số chính ở thời điểm phân tích đã đăng ký."
+  rollback: "Giám đốc vận hành tắt cờ trong 30 phút. CSKH tiếp nhận các ca đang mở và đối soát sổ cái trước khi xử lý tiếp."
+  decision_date: "2027-01-05"
+  decision_date_status: "Mốc dự kiến theo hướng dẫn lab. Nếu thiếu cụm, cỡ mẫu hiệu dụng hoặc thời gian theo dõi, ghi chưa đủ bằng chứng và chốt lịch mới trước khi xem hiệu ứng chính."
+  simulated_inputs:
+    - "Phút xem lại và phút làm lại từ phut_xem_lai_simulated và phut_lam_lai_simulated, dùng trong A/B."
+    - "Giá token, tool, lương 2.000 đ/phút, baseline 12.000 đ/yêu cầu, cố định 40 triệu đ/tháng là giả định lab."
+    - "Baseline kết quả 0,70 và ICC 0,02 là giả định lập kế hoạch. Rà lại lưu lượng và phân bố theo nhân viên trước khi chạy."
