@@ -2,34 +2,34 @@
 
 20 ca lỗi nằm trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx`. Năm loại theo Google PAIR: **Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm**. Gắn nhãn theo nguyên nhân gốc, không theo chỗ cần sửa.
 
-## Nhãn CP3 và nguồn đối chiếu
+## Đối chiếu nhãn CP3
 
-**Người gắn nhãn 1 là Thiên Bảo. Người gắn nhãn 2 là Nguyễn Quỳnh Trang.** Thiên Bảo đã rà nhãn tham khảo theo hướng dẫn lab và ghi lý do trong [bản kiểm số](kiem_so_thanh_vien_2.md#c--bảng-đối-chiếu-20-ca). Trang đã đưa bộ nhãn đề xuất và lý do vào bảng. Dấu **—** là ô chờ bản nhãn gốc hoặc kết quả thống nhất.
+**Người gắn nhãn 1 là Thiên Bảo. Người gắn nhãn 2 là Nguyễn Quỳnh Trang.** Thiên Bảo đã rà nhãn tham khảo theo hướng dẫn lab và ghi lý do trong [bản kiểm số](kiem_so_thanh_vien_2.md#c--bảng-đối-chiếu-20-ca). Trang đã đưa bộ nhãn đề xuất và lý do vào bảng.
 
-| Ca | Nhãn tham khảo do Thiên Bảo đối chiếu | Nhãn gốc Thiên Bảo (1) | Nhãn đề xuất của Trang (2) | Nhãn gốc Trang (2) | Trùng? | Nhãn thống nhất |
-| ---: | --- | --- | --- | --- | --- | --- |
-| 1 | Do người dùng | — | Do người dùng | — | — | — |
-| 2 | Hệ thống | — | Hệ thống | — | — | — |
-| 3 | Ngữ cảnh | — | Ngữ cảnh | — | — | — |
-| 4 | Giới hạn hệ thống | — | Giới hạn hệ thống | — | — | — |
-| 5 | Ngầm | — | Ngầm | — | — | — |
-| 6 | Do người dùng | — | Do người dùng | — | — | — |
-| 7 | Hệ thống | — | Hệ thống | — | — | — |
-| 8 | Hệ thống | — | Hệ thống | — | — | — |
-| 9 | Do người dùng | — | Do người dùng | — | — | — |
-| 10 | Ngữ cảnh | — | Ngữ cảnh | — | — | — |
-| 11 | Giới hạn hệ thống | — | Giới hạn hệ thống | — | — | — |
-| 12 | Ngầm | — | Ngầm | — | — | — |
-| 13 | Giới hạn hệ thống | — | Giới hạn hệ thống | — | — | — |
-| 14 | Do người dùng | — | Do người dùng | — | — | — |
-| 15 | Hệ thống | — | Hệ thống | — | — | — |
-| 16 | Ngữ cảnh | — | Ngữ cảnh | — | — | — |
-| 17 | Ngầm | — | Ngầm | — | — | — |
-| 18 | Ngữ cảnh | — | Ngữ cảnh | — | — | — |
-| 19 | Giới hạn hệ thống | — | Giới hạn hệ thống | — | — | — |
-| 20 | Hệ thống | — | Hệ thống | — | — | — |
+| Ca | Nhãn tham khảo của Thiên Bảo (1) | Nhãn đề xuất của Trang (2) | Trùng? | Nhãn thống nhất |
+| ---: | --- | --- | --- | --- |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** Chờ hai bản nhãn được lưu độc lập trước khi đối chiếu. Khi có đủ, đếm số nhãn gốc trùng và chia cho 20. Ngưỡng của lab là 16/20 (80%).
+**Kết quả đối chiếu:** 20/20 ca trùng (100%). Đây là tỷ lệ khớp giữa nhãn tham khảo và nhãn đề xuất. Hồ sơ chưa có bằng chứng để tính đồng thuận độc lập theo yêu cầu của lab.
 
 ## Căn cứ cho bộ nhãn đề xuất số 2
 
@@ -60,7 +60,7 @@
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-Các quy tắc dưới đây dùng để thảo luận khi đối chiếu hai bản gốc:
+Hai cột hiện tại khớp ở cả 20 ca. Các quy tắc dưới đây dùng để rà các ca dễ nhầm:
 
 - Ca 6, 9: đầu vào sai thuộc Do người dùng; thiếu hướng dẫn là phần cần khắc phục.
 - Ca 8, 15: lỗi hiển thị hoặc đã được nhân viên bắt thuộc Hệ thống. Ca 5, 12, 17 chỉ lộ qua kiểm tra thuộc Ngầm; lỗi ngầm có thể là chi phí.
@@ -73,7 +73,7 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 
 ### Cách hoàn tất trong buổi lab
 
-1. Mỗi người làm một bản riêng trong 8 phút và lưu bản gốc trước khi so. Điền cột của từng người đúng theo bản đã lưu.
+1. Mỗi người làm một bản riêng trong 8 phút và lưu bản gốc trước khi so. Giữ hai bản đã lưu làm bằng chứng khi báo cáo đồng thuận độc lập.
 2. Đếm số dòng trùng rồi chia cho 20. Nếu dưới 16 dòng trùng, rà định nghĩa và ghi quy tắc xử lý bất đồng. Lưu riêng nhãn thống nhất.
 3. Sau khi thống nhất, chọn một ca thật cho mỗi loại và điền mã ca vào bảng khắc phục. Điều chỉnh tín hiệu và biện pháp dự thảo theo nội dung của ca đã chọn.
 
