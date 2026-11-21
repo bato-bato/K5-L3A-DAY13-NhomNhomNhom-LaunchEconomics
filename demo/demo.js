@@ -108,7 +108,7 @@ function mountDemo() {
   document.getElementById("criteria").innerHTML = rubric.map(({ title, levels }, index) => `
     <fieldset>
       <legend>${title}</legend>
-      <p class="rubric">${levels.map((text, i) => `<strong>${points[i]} điểm</strong> · ${text}`).join(" / ")}</p>
+      <ul class="rubric">${levels.map((text, i) => `<li><strong>${points[i]} điểm</strong><span>${text}</span></li>`).join("")}</ul>
       <div class="fields score-fields">
         <label>Điểm
           <select name="score${index}" required>

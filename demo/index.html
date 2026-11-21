@@ -10,10 +10,10 @@
 <body>
   <header class="site-header">
     <div class="shell topbar">
-      <a class="brand" href="#tong-quan">LogiX<span>·</span>VN</a>
+      <a class="brand" href="#tong-quan"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>LogiX<span class="brand-dot">·</span>VN</a>
       <nav aria-label="Điều hướng">
         <a href="#tong-quan">Tổng quan</a>
-        <a href="#phieu-cham">Phiếu chấm</a>
+        <a class="nav-review" href="#phieu-cham">Phiếu chấm <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -21,25 +21,25 @@
     <section id="tong-quan" aria-labelledby="title">
       <div class="hero">
         <div>
-          <p class="eyebrow">DAY 13 / GATE 2A</p>
-          <h1 id="title">Pilot trợ lý<br>hoàn phí</h1>
-          <p class="intro">Đề xuất Go có điều kiện cho yêu cầu nội địa và hàng nặng.</p>
+          <p class="eyebrow">DAY 13 <span aria-hidden="true">/</span> GATE 2A</p>
+          <h1 id="title">Pilot trợ lý <em>hoàn phí</em></h1>
+          <p class="intro">Đề xuất <strong>Go có điều kiện</strong> cho yêu cầu nội địa và hàng nặng.</p>
         </div>
         <dl class="hero-stats">
-          <div><dt>Chi phí mỗi việc thành công</dt><dd>4.472 ₫</dd><small>978 việc thành công · simulated</small></div>
+          <div><dt>Chi phí mỗi việc thành công</dt><dd>4.472 ₫</dd><small>978 việc thành công · mô phỏng</small></div>
           <div><dt>Đóng trong 24h, không mở lại 7 ngày</dt><dd>82,83%</dd><small>994 trên 1.200 yêu cầu chạy thử</small></div>
         </dl>
       </div>
       <div class="analysis-grid">
         <article class="card">
           <h2>Chi phí theo loại yêu cầu</h2>
-          <p class="muted">Đồng trên mỗi việc thành công · simulated</p>
+          <p class="muted card-description">Đồng trên mỗi việc thành công · mô phỏng</p>
           <div id="cost-chart" class="cost-chart"></div>
           <p class="benchmark"><span></span> Mốc nhân viên tự làm · 12.000 ₫</p>
         </article>
         <article class="card">
           <h2>Kịch bản vận hành</h2>
-          <p class="muted">So với mức gốc 4.472 ₫ · simulated</p>
+          <p class="muted card-description">So với mức gốc 4.472 ₫ · mô phỏng</p>
           <label for="scenario">Kịch bản</label>
           <select id="scenario"></select>
           <div class="scenario-result" aria-live="polite">
@@ -50,9 +50,8 @@
       </div>
       <article class="pilot-strip" aria-label="Thiết kế pilot">
         <div>
-          <strong>20 nhân viên mỗi nhóm</strong>
-          <span>Can thiệp: 20 người dùng trợ lý AI</span>
-          <span>Đối chứng: 20 người làm theo quy trình hiện tại</span>
+          <strong>20 người can thiệp, 20 người đối chứng</strong>
+          <span>Nhóm can thiệp dùng trợ lý AI. Nhóm đối chứng làm theo quy trình hiện tại.</span>
         </div>
         <div>
           <strong>5.980 yêu cầu mỗi nhóm</strong>
