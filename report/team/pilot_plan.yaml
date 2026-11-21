@@ -26,7 +26,7 @@ pilot:
     random_seed: 1306
     analysis: "Phân tích theo phân nhóm ban đầu ở giai đoạn 50%, kể cả yêu cầu không dùng trợ lý. Ước lượng chênh lệch theo điểm phần trăm với sai số chuẩn theo cụm nhân viên, có điều chỉnh depot."
   rollout: [0.10, 0.25, 0.50]
-  rollout_schedule: "4 rồi 10 rồi 20 nhân viên được bật, tối thiểu một tuần mỗi bước. Phân tích chính bắt đầu khi đủ 20 nhân viên can thiệp và 20 đối chứng."
+  rollout_schedule: "Bật cho 4 rồi 10 rồi 20 nhân viên trong nhánh can thiệp đã định trước, tối thiểu một tuần mỗi bước. Chỉ thu ca cho phân tích chính khi đủ 20 nhân viên can thiệp và 20 đối chứng. Chờ dữ liệu an toàn đủ hạn trước khi tăng rollout."
   primary_metric:
     name: dong_trong_24h_khong_mo_lai_7_ngay
     baseline: 0.70
@@ -38,6 +38,7 @@ pilot:
     clusters_per_arm: 20
     target_requests_per_staff: 299
     target_requests_per_arm: 5980
+    sample_check: "Kiểm số ca đủ điều kiện và đủ thời gian theo dõi theo từng nhân viên và từng nhánh trước khi xem hiệu ứng chính. Khi lưu lượng lệch giữa các nhân viên, tính n hiệu dụng bằng bình phương tổng số ca chia tổng của m × (1 + (m − 1) × 0,02) trên các nhân viên, với m là số ca của từng người. Yêu cầu ít nhất 859 hiệu dụng và 20 cụm mỗi nhánh."
     followup: "Chốt kết quả sau khi mọi yêu cầu thuộc kỳ đo có ít nhất 8 ngày từ khi tạo, đủ để quan sát đóng trong 24 giờ và mở lại trong 7 ngày sau đóng."
   identifiability:
     concurrent_control: "Cùng kỳ, cùng depot, giữ quy trình tiếp nhận và chính sách hoàn phí như nhau."
@@ -52,6 +53,7 @@ pilot:
   rollback: "Giám đốc vận hành tắt cờ trong 30 phút. CSKH tiếp nhận các ca đang mở và đối soát sổ cái trước khi xử lý tiếp."
   decision_date: "2027-01-05"
   decision_date_status: "Mốc dự kiến theo hướng dẫn lab. Nếu thiếu cụm, cỡ mẫu hiệu dụng hoặc thời gian theo dõi, ghi chưa đủ bằng chứng và chốt lịch mới trước khi xem hiệu ứng chính."
+  decision_rule: "Cân nhắc mở rộng nếu ước lượng cải thiện ít nhất 5 điểm phần trăm, cận dưới khoảng tin cậy 95% lớn hơn 0 và các điều kiện an toàn, chi phí, sử dụng đều đạt. Mức 6 điểm là MDE của thiết kế. Thiếu mẫu hoặc thời gian theo dõi thì ghi chưa đủ bằng chứng trước khi xem hiệu ứng chính."
   simulated_inputs:
     - "Phút xem lại và phút làm lại từ phut_xem_lai_simulated và phut_lam_lai_simulated, dùng trong A/B."
     - "Giá token, tool, lương 2.000 đ/phút, baseline 12.000 đ/yêu cầu, cố định 40 triệu đ/tháng là giả định lab."
