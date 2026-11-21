@@ -11,9 +11,9 @@ Tính chi phí trợ lý hoàn phí từ mọi lần chạy và thời gian nhâ
 ## 3. Giải pháp
 
 - **A và B** Tính lại từ hai CSV bằng [lab13.py](../../src/lab13.py). Bảng [chi phí](bang_chi_phi.md) ghi giả định cố định, giới hạn lần chạy và xem lại toàn bộ đề xuất.
-- **C** [Bảng lỗi](bang_loi.md) chờ hai lượt gắn nhãn độc lập, tính đồng thuận và chọn năm ca đã thống nhất.
+- **C** [Bảng lỗi](bang_loi.md) ghi hai lượt gắn nhãn độc lập theo xác nhận của Trang, đồng thuận 20/20 ca (100%) và 5 biện pháp khắc phục đủ 5 loại. Giữ hai bản nhãn riêng trước đối chiếu làm bằng chứng; nguồn hỗ trợ AI ghi trong báo cáo cá nhân.
 - **D** [Kế hoạch pilot](pilot_plan.yaml) dự thảo chia ngẫu nhiên theo nhân viên, phân tầng theo depot, dùng nhóm đối chứng đồng thời.
-- **E** [Đặc tả chỉ số](chi_so.md) ghép event cấp yêu cầu và trace. [Hồ sơ launch v0](ho_so_launch_v0.md) đưa ra đề xuất có điều kiện.
+- **E** [Đặc tả chỉ số](chi_so.md) đã đối chiếu công thức và mẫu số của ba tỷ lệ, rà 12 event có trace_id và 3 rủi ro kinh tế lấy từ B1, B4, A4. [Hồ sơ launch v0](ho_so_launch_v0.md) cập nhật kết quả CP3 và đưa ra đề xuất có điều kiện.
 
 ## 4. Kết quả
 
@@ -25,7 +25,8 @@ Python mặc định trên máy chuẩn bị bản nháp thiếu pandas. Mã đ�
 
 ## 6. Tổng hợp đóng góp
 
-Cập nhật [TEAM.md](../../TEAM.md) sau khi nhóm xác nhận vai và đóng góp thực tế.
+- **Nguyễn Quỳnh Trang:** Gắn nhãn số 2 theo xác nhận cá nhân, đối chiếu kết quả CP3 và hoàn thiện 5 biện pháp; kiểm chứng ba tỷ lệ E, rà event/rủi ro và cập nhật hồ sơ launch. Bằng chứng chính: commit `10c12f6`, [báo cáo cá nhân](2A202603477_NguyenQuynhTrang.md) và phần đóng góp trong [TEAM.md](../../TEAM.md).
+
 
 ## 7. Hạn chế
 
