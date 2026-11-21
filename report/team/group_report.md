@@ -11,8 +11,8 @@ Tính chi phí trợ lý hoàn phí từ mọi lần chạy và thời gian nhâ
 ## 3. Giải pháp
 
 - **A và B** Tính lại từ hai CSV bằng [lab13.py](../../src/lab13.py). Bảng [chi phí](bang_chi_phi.md) ghi giả định cố định, giới hạn lần chạy và xem lại toàn bộ đề xuất.
-- **C** [Bảng lỗi](bang_loi.md) chờ hai lượt gắn nhãn độc lập, tính đồng thuận và chọn năm ca đã thống nhất.
-- **D** [Kế hoạch pilot](pilot_plan.yaml) dự thảo chia ngẫu nhiên theo nhân viên, phân tầng theo depot, dùng nhóm đối chứng đồng thời.
+- **C** [Bảng lỗi](bang_loi.md) ghi kết quả đối chiếu của Thiên Bảo và Nguyễn Quỳnh Trang: 20/20 ca khớp và 5 biện pháp đề xuất cho đủ 5 loại lỗi.
+- **D** [Kế hoạch pilot](pilot_plan.yaml) chia ngẫu nhiên theo nhân viên, phân tầng theo depot và dự kiến 20 nhân viên cùng 5.980 ca mỗi nhánh. Mốc quyết định là 05/01/2027 nếu đủ mẫu và thời gian theo dõi.
 - **E** [Đặc tả chỉ số](chi_so.md) ghép event cấp yêu cầu và trace. [Hồ sơ launch v0](ho_so_launch_v0.md) đưa ra đề xuất có điều kiện.
 
 ## 4. Kết quả
