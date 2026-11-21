@@ -4,38 +4,69 @@
 
 ## Hai bộ nhãn độc lập
 
-Người gắn nhãn 1: thành viên kiểm số · Người gắn nhãn 2: thành viên giữ hồ sơ. Điền tên khi nhóm xác nhận. Hai người lưu bản riêng sau 8 phút rồi mới đối chiếu.
+Người gắn nhãn 1: thành viên 2,  bản gốc. Người gắn nhãn 2: Nguyễn Quỳnh Trang,  tự rà và xác nhận bộ nhãn đề xuất dưới đây.
+
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | ... | ... | ... | ... |
-| 2 | ... | ... | ... | ... |
-| 3 | ... | ... | ... | ... |
-| 4 | ... | ... | ... | ... |
-| 5 | ... | ... | ... | ... |
-| 6 | ... | ... | ... | ... |
-| 7 | ... | ... | ... | ... |
-| 8 | ... | ... | ... | ... |
-| 9 | ... | ... | ... | ... |
-| 10 | ... | ... | ... | ... |
-| 11 | ... | ... | ... | ... |
-| 12 | ... | ... | ... | ... |
-| 13 | ... | ... | ... | ... |
-| 14 | ... | ... | ... | ... |
-| 15 | ... | ... | ... | ... |
-| 16 | ... | ... | ... | ... |
-| 17 | ... | ... | ... | ... |
-| 18 | ... | ... | ... | ... |
-| 19 | ... | ... | ... | ... |
-| 20 | ... | ... | ... | ... |
+| 1 |  | Do người dùng |  |  |
+| 2 |  | Hệ thống |  |  |
+| 3 |  | Ngữ cảnh |  |  |
+| 4 |  | Giới hạn hệ thống |  |  |
+| 5 |  | Ngầm |  |  |
+| 6 |  | Do người dùng |  |  |
+| 7 |  | Hệ thống |  |  |
+| 8 |  | Hệ thống |  |  |
+| 9 |  | Do người dùng |  |  |
+| 10 |  | Ngữ cảnh |  |  |
+| 11 |  | Giới hạn hệ thống |  |  |
+| 12 |  | Ngầm |  |  |
+| 13 |  | Giới hạn hệ thống |  |  |
+| 14 |  | Do người dùng |  |  |
+| 15 |  | Hệ thống |  |  |
+| 16 |  | Ngữ cảnh |  |  |
+| 17 |  | Ngầm |  |  |
+| 18 |  | Ngữ cảnh |  |  |
+| 19 |  | Giới hạn hệ thống |  |  |
+| 20 |  | Hệ thống |  |  |
 
-**Tỉ lệ đồng thuận:** ... / 20 = ...%
+**Tỉ lệ đồng thuận:** 
+
+## Căn cứ cho bộ nhãn đề xuất số 2
+
+| Ca | Lý do |
+| --: | --- |
+| 1 | Khách nhập tài khoản thiếu 2 chữ số, tạo đầu vào sai. |
+| 2 | Kiện 28 kg nhưng gọi tool theo hàng thường, hoàn thiếu 45.000 đ. |
+| 3 | Hoàn về ví đúng thiết kế trong 5 phút nhưng khách  về ngân hàng. |
+| 4 | Không có dữ liệu chặng nước ngoài để xác định trạng thái. |
+| 5 | Kiểm tra cuối tuần mới thấy 14 đơn hoàn thừa, không khách hoặc cảnh báo nào phát hiện trước đó. |
+| 6 | Khách chọn nhầm luồng giao trễ dù mô tả hàng vỡ. |
+| 7 | Ghi sổ lỗi 503 sau 3 lần thử nhưng vẫn báo thành công. |
+| 8 | Căn cứ hiển thị dẫn điều 7.2 không tồn tại, dù số tiền đúng. |
+| 9 | Khách nhập mã sàn thay mã vận đơn; thiếu hướng dẫn là điểm cần sửa. |
+| 10 | Từ chối đúng điều khoản bão nhưng không khớp kỳ vọng từ cam kết 24 giờ. |
+| 11 | Chưa hỗ trợ đầu vào âm thanh 40 giây. |
+| 12 | Chi phí token gấp 3 trong 3 tuần mà không ai nhận ra, dù kết quả đúng. |
+| 13 | Bảo hiểm đối tác nằm ngoài phạm vi; cách thông báo giới hạn chưa rõ. |
+| 14 | Khách bấm nhầm xác nhận đã nhận tiền. |
+| 15 | Trễ 26 giờ phải hoàn 50% nhưng tính 100%; nhân viên đã bắt lỗi. |
+| 16 | Gửi lúc 2:14 sáng đúng thiết kế gửi ngay nhưng không phù hợp hoàn cảnh khách. |
+| 17 | Dùng bảng giá cũ cho 212 đơn trong 9 ngày mà không ai mở lại. |
+| 18 | Đúng 30.000 đ × 50% = 15.000 đ nhưng thiếu giải thích nên khách hiểu sai. |
+| 19 | Đơn 14 tháng vượt cửa sổ dữ liệu 12 tháng. |
+| 20 | Thiếu khóa chống trùng dẫn tới hoàn 2 lần cho cùng đơn. |
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- ...
+Chưa có bất đồng thực tế. Các quy tắc dưới đây là đề xuất để thảo luận sau khi lưu hai bản gốc:
+
+- Ca 6, 9: đầu vào sai thuộc Do người dùng; thiếu hướng dẫn là phần cần khắc phục.
+- Ca 8, 15: lỗi hiển thị hoặc đã được nhân viên bắt thuộc Hệ thống. Ca 5, 12, 17 chỉ lộ qua kiểm tra thuộc Ngầm; lỗi ngầm có thể là chi phí.
+- Ca 13: ngoài phạm vi thuộc Giới hạn hệ thống dù cách phản hồi chưa tốt.
+- Ca 3, 10, 16, 18: đúng thiết kế/chính sách nhưng không khớp kỳ vọng hoặc hoàn cảnh thuộc Ngữ cảnh.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
@@ -47,10 +78,12 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 2. Đếm số dòng trùng rồi chia cho 20. Nếu dưới 16 dòng trùng, rà định nghĩa và ghi quy tắc xử lý bất đồng. Lưu riêng nhãn thống nhất.
 3. Sau khi thống nhất, chọn một ca thật cho mỗi loại và điền mã ca vào bảng khắc phục. Điều chỉnh tín hiệu và biện pháp dự thảo theo nội dung của ca đã chọn.
 
-| Ca đã thống nhất | Loại | Tín hiệu kiểm tra gợi ý | Biện pháp dự thảo | Người phụ trách |
+Các ca dưới đây được chọn theo bộ nhãn đề xuất,  nhóm xác nhận. Event và ngưỡng là đề xuất cho pilot, chưa phải kết quả đo hay biện pháp đã triển khai. Mỗi event có request_id, trace_id, thời điểm và ID để loại trùng.
+
+| Ca đề xuất | Loại | Phát hiện đo được | Biện pháp | Người phụ trách |
 | ---: | --- | --- | --- | --- |
-| Chờ chọn | Do người dùng | Đếm yêu cầu sai định dạng theo lý do trong ngày. Rà nếu vượt 2%. | Kiểm tra kiểu mã khi nhập và đưa ví dụ sửa lỗi ngay tại trường nhập. | PM trợ lý hoàn phí |
-| Chờ chọn | Hệ thống | Đối soát mỗi giờ thông báo hoàn tiền với bản ghi sổ cái cùng request_id. Cảnh báo ngay khi có thông báo thành công thiếu giao dịch hợp lệ. | Chỉ báo hoàn tất sau xác nhận ghi sổ. Dùng khóa chống trùng và chuyển giao khi trạng thái chưa xác định. | Kỹ sư trưởng agent |
-| Chờ chọn | Ngữ cảnh | Theo tuần, lấy mẫu yêu cầu mở lại vì khách không hiểu kết quả rồi đối chiếu chính sách. | Hiển thị công thức tính tiền và lý do áp dụng trong thông báo. | Trưởng nhóm CSKH |
-| Chờ chọn | Giới hạn hệ thống | Đếm lượt chuyển giao do thiếu dữ liệu hoặc ngoài phạm vi theo loại yêu cầu mỗi tuần. | Dừng tự xử lý khi thiếu trường bắt buộc, chuyển giao kèm lý do và thông tin đã kiểm tra. | PM trợ lý hoàn phí |
-| Chờ chọn | Ngầm | Kế toán kiểm 100 giao dịch mỗi tuần, đối chiếu bản giá và số tiền. Rà ngay khi có ít nhất 1 giao dịch lệch. | Ghi phiên bản chính sách bằng trace và vô hiệu hóa bộ nhớ đệm khi đổi bảng giá. | Kế toán trưởng |
+| 9 | Do người dùng | Event input_validation_failed, reason=wrong_identifier_type; mỗi ngày tính số yêu cầu sai kiểu mã / số yêu cầu nhập mã, cảnh báo khi >2%. | Nhận diện mã sàn, tra ánh xạ sang mã vận đơn nếu có; nếu không, hiển thị ví dụ và vị trí lấy mã để khách nhập lại. | PM trợ lý hoàn phí |
+| 7 | Hệ thống | Bổ sung customer_notification_sent; đối soát mỗi giờ thông báo đã hoàn với refund_ledger_write.result=ok theo yêu cầu và giao dịch; ≥1 ca thiếu xác nhận thì cảnh báo ngay. | Chỉ báo đã hoàn sau xác nhận sổ cái; sau 3 lần lỗi 503, báo đang xử lý và chuyển nhân viên kèm trạng thái giao dịch. | Kỹ sư trưởng agent |
+| 18 | Ngữ cảnh | Mỗi tuần rà ticket_reopened.reason=amount_dispute với audit_sample_checked và customer_notification_sent; ≥1 ca tiền đúng nhưng thiếu cách tính thì sửa mẫu tin nhắn. | Ghi rõ phí gốc, tỷ lệ, kết quả và căn cứ: 30.000 đ × 50% = 15.000 đ. | Trưởng nhóm CSKH |
+| 4 | Giới hạn hệ thống | Tổng hợp handoff_to_staff.reason=missing_foreign_leg_data hàng tuần; ≥1 ca thiếu dữ liệu vẫn tự hoàn hoặc thiếu chuyển giao thì cảnh báo. | Loại quoc_te khỏi pilot; kiểm dữ liệu bắt buộc trước tính tiền, chuyển giao kèm thông tin đã tra và phần còn thiếu. | PM trợ lý hoàn phí |
+| 17 | Ngầm | Kiểm 100 giao dịch/tuần bằng audit_sample_checked, đối chiếu tiền và policy_version với bảng giá hiệu lực; ≥1 ca lệch thì điều tra và mở rộng kiểm tra. | Vô hiệu hóa cache khi đổi giá, ghi phiên bản chính sách vào trace; chặn bản hết hiệu lực và đối soát giao dịch bị ảnh hưởng. | Kế toán trưởng |
