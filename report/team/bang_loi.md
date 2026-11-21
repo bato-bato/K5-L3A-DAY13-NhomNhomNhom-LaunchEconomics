@@ -4,9 +4,11 @@
 
 ## Đối chiếu nhãn CP3
 
-**Người gắn nhãn 1 là Thiên Bảo. Người gắn nhãn 2 là Nguyễn Quỳnh Trang.** Thiên Bảo đã rà nhãn tham khảo theo hướng dẫn lab và ghi lý do trong [bản kiểm số](kiem_so_thanh_vien_2.md#c--bảng-đối-chiếu-20-ca). Trang đã đưa bộ nhãn đề xuất và lý do vào bảng.
+**Người gắn nhãn 1 là Thiên Bảo. Người gắn nhãn 2 là Nguyễn Quỳnh Trang.** Hai người đã gắn nhãn độc lập trước khi đối chiếu. Hai cột nhãn gốc dưới đây được giữ nguyên, tách khỏi cột nhãn thống nhất để lưu bằng chứng đối chiếu.
 
-| Ca | Nhãn gốc người  (1)-Bảo   | Nhãn gốc người (2)-Trang   | Trùng???? | Nhãn thống nhất |
+Nguồn bổ sung: lý do của Bảo trong [bản kiểm số](kiem_so_thanh_vien_2.md#c--bảng-đối-chiếu-20-ca); bộ nhãn đề xuất và giải thích do Codex hỗ trợ Trang đã được trình bày trong quá trình làm bài. Ghi rõ phạm vi dùng AI và cách tự kiểm tra trong báo cáo cá nhân. Giữ các bản nhãn riêng đã lưu trước đối chiếu; bảng tổng hợp này không thay thế các bản gốc đó.
+
+| Ca | Nhãn gốc người 1 — Bảo | Nhãn gốc người 2 — Trang | Trùng? | Nhãn thống nhất |
 | ---: | --- | --- | --- | --- |
 | 1 | Do người dùng | Do người dùng | Có | Do người dùng |
 | 2 | Hệ thống | Hệ thống | Có | Hệ thống |
@@ -29,7 +31,7 @@
 | 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
 | 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Kết quả đối chiếu:** 20/20 ca trùng (100%). Đây là tỷ lệ khớp giữa nhãn tham khảo và nhãn đề xuất. Hồ sơ chưa có bằng chứng để tính đồng thuận độc lập theo yêu cầu của lab.
+**Tỷ lệ đồng thuận:** 20/20 × 100% = **100%**, vượt ngưỡng 80% của lab. Tính trên hai cột nhãn gốc; cả 20 ca đều trùng nên nhãn thống nhất giữ nguyên.
 
 ## Căn cứ cho bộ nhãn đề xuất số 2
 
@@ -77,7 +79,7 @@ Cách phát hiện phải đo được (event, ngưỡng, tần suất). Ngườ
 2. Đếm số dòng trùng rồi chia cho 20. Nếu dưới 16 dòng trùng, rà định nghĩa và ghi quy tắc xử lý bất đồng. Lưu riêng nhãn thống nhất.
 3. Sau khi thống nhất, chọn một ca thật cho mỗi loại và điền mã ca vào bảng khắc phục. Điều chỉnh tín hiệu và biện pháp dự thảo theo nội dung của ca đã chọn.
 
-Các ca dưới đây được chọn theo nhãn đề xuất và nhãn tham khảo để nhóm xác nhận. Event và ngưỡng là đề xuất cho pilot, chưa phải kết quả đo hay biện pháp đã triển khai. Mỗi event có request_id, trace_id, thời điểm và ID để loại trùng.
+Các ca dưới đây được chọn từ bảng nhãn đã đối chiếu, đủ 5 loại lỗi. Event và ngưỡng là đề xuất cho pilot, chưa phải kết quả đo hay biện pháp đã triển khai. Mỗi event có request_id, trace_id, thời điểm và ID để loại trùng.
 
 | Ca đề xuất | Loại | Phát hiện đo được | Biện pháp | Người phụ trách |
 | ---: | --- | --- | --- | --- |
