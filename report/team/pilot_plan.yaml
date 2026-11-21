@@ -1,4 +1,4 @@
-# Kế hoạch dự thảo. Ngày dự kiến và ngưỡng do nhóm xác nhận trước khi chạy.
+# Thiên Bảo rà thiết kế. Điều kiện bật và ngày quyết định theo lịch dưới đây.
 # D1 · Baseline 0,70; alpha 0,05; power 0,80; ICC 0,02.
 # a) Theo yêu cầu, tăng 5 điểm: 1.251 yêu cầu mỗi nhóm.
 # b) Theo nhân viên, m=75: DE=2,48; cần 3.103 yêu cầu và 42 nhân viên mỗi nhóm.
@@ -18,6 +18,14 @@
 pilot:
   owner: Giám đốc vận hành LogiX-VN
   scope: "Yêu cầu noi_dia và hang_nang tại các depot có nhân viên ở cả hai nhánh. Xác nhận danh sách depot và khả năng đủ 40 nhân viên trước khi chạy."
+  prelaunch_check:
+    reviewer: Thiên Bảo
+    review_date: "2026-11-27"
+    status: "Đã rà thiết kế. Chờ Giám đốc vận hành xác nhận danh sách nhân sự, dự báo lưu lượng theo nhánh và lịch rollout trước khi bật."
+    scope_check: "Chỉ nhận noi_dia và hang_nang. Chốt danh sách depot có nhân viên ở cả hai nhánh và kiểm tra bộ lọc yêu cầu trước khi bật."
+    staffing_check: "Chốt danh sách 40 nhân viên, 20 can thiệp và 20 đối chứng. Lưu phân nhóm ngẫu nhiên theo depot trước lần bật đầu."
+    volume_check: "Xác nhận dự báo đủ ít nhất 5.980 ca đủ điều kiện mỗi nhánh ở bước 50%, tương ứng 11.960 ca tổng cộng, và khả năng đạt ít nhất 859 ca hiệu dụng mỗi nhánh. Số ca thực tế được thu trong pilot và kiểm tra trước khi ra quyết định."
+    launch_rule: "Chỉ bật sau khi Giám đốc vận hành xác nhận phạm vi, nhân sự và khả năng thu đủ ca trước hạn. Nếu dự báo chưa đạt, chốt lại lịch hoặc thiết kế trước khi bật."
   assignment:
     unit: staff
     control_share: 0.5
@@ -52,7 +60,9 @@ pilot:
   interim_looks: "Kiểm an toàn, chi phí vận hành và mức sử dụng. Chỉ kiểm định chỉ số chính ở thời điểm phân tích đã đăng ký."
   rollback: "Giám đốc vận hành tắt cờ trong 30 phút. CSKH tiếp nhận các ca đang mở và đối soát sổ cái trước khi xử lý tiếp."
   decision_date: "2027-01-05"
-  decision_date_status: "Mốc dự kiến theo hướng dẫn lab. Nếu thiếu cụm, cỡ mẫu hiệu dụng hoặc thời gian theo dõi, ghi chưa đủ bằng chứng và chốt lịch mới trước khi xem hiệu ứng chính."
+  decision_timezone: Asia/Ho_Chi_Minh
+  enrollment_cutoff_date: "2026-12-27"
+  decision_date_status: "Chốt 05/01/2027 làm mốc ra quyết định có điều kiện. Để giữ mốc này, hoàn tất thu mẫu chính hết ngày 27/12/2026 theo GMT+7 và chờ mỗi ca đủ ít nhất 8 ngày từ lúc tạo. Nếu thiếu 20 cụm, 5.980 ca đủ hạn hoặc 859 ca hiệu dụng ở bất kỳ nhánh nào, ghi chưa đủ bằng chứng và chốt lịch mới trước khi xem hiệu ứng chính."
   decision_rule: "Cân nhắc mở rộng nếu ước lượng cải thiện ít nhất 5 điểm phần trăm, cận dưới khoảng tin cậy 95% lớn hơn 0 và các điều kiện an toàn, chi phí, sử dụng đều đạt. Mức 6 điểm là MDE của thiết kế. Thiếu mẫu hoặc thời gian theo dõi thì ghi chưa đủ bằng chứng trước khi xem hiệu ứng chính."
   simulated_inputs:
     - "Phút xem lại và phút làm lại từ phut_xem_lai_simulated và phut_lam_lai_simulated, dùng trong A/B."
